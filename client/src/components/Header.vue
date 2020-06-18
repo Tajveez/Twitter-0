@@ -37,7 +37,7 @@ export default {
         }, 3500);
       } else {
         PostService.createPost(this.text);
-        this.posts = await PostService.getPosts();
+        this.$emit("update:post");
         this.text = "";
       }
     }

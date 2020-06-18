@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <Header />
+    <Header @update:post="updatePosts" />
     <hr />
     <p class="error" v-if="error">{{ error }}</p>
     <div class="post-container" v-if="posts.length > 0">
@@ -64,6 +64,9 @@ export default {
     },
     async deletePost(id) {
       await PostService.deletePost(id);
+      this.posts = await PostService.getPosts();
+    },
+    async updatePosts() {
       this.posts = await PostService.getPosts();
     }
   }
