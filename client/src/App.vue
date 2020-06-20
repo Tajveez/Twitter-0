@@ -1,18 +1,17 @@
 <template>
   <div id="app">
     <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
-    <Posts />
+
+    <router-link to="/">Home</router-link> |
+    <router-link to="/about">About</router-link>
+    <router-view />
   </div>
 </template>
 
 <script>
-import Posts from "./components/Posts.vue";
-
 export default {
   name: "App",
-  components: {
-    Posts,
-  },
+  components: {},
 };
 </script>
 

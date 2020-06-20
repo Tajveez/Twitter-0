@@ -24,7 +24,7 @@ import Header from "@/components/Header";
 export default {
   name: "Posts",
   components: {
-    Header
+    Header,
   },
   data() {
     return {
@@ -42,8 +42,8 @@ export default {
         "September",
         "October",
         "November",
-        "December"
-      ]
+        "December",
+      ],
     };
   },
   async created() {
@@ -68,8 +68,8 @@ export default {
     },
     async updatePosts() {
       this.posts = await PostService.getPosts();
-    }
-  }
+    },
+  },
 };
 </script>
 
