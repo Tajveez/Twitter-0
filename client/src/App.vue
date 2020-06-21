@@ -1,17 +1,24 @@
 <template>
   <div id="app">
     <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
-
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-    <router-view />
+    <Header />
+    <div class="ui equal width three column grid">
+      <router-view class="column" />
+      <RightSidebar class="three wide column" />
+    </div>
   </div>
 </template>
 
 <script>
+import Header from "@/components/Header";
+import RightSidebar from "@/components/RightSidebar";
+
 export default {
   name: "App",
-  components: {},
+  components: {
+    Header,
+    RightSidebar
+  }
 };
 </script>
 
@@ -24,6 +31,18 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 20px;
+  margin-top: 10px;
+}
+/* .content-area {
+  display: flex;
+} */
+body {
+  background-color: #f7f7f7;
+  /* padding-top: 50px;
+  padding-bottom: 50px; */
+}
+
+.is-danger {
+  color: #9f3a38;
 }
 </style>

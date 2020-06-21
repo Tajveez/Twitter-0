@@ -1,7 +1,7 @@
 <template>
   <div class="container">
-    <Header @update:post="updatePosts" />
     <hr />
+    <PostHeader @update:post="updatePosts" />
     <p class="error" v-if="error">{{ error }}</p>
     <div class="post-container" v-if="posts.length > 0">
       <div class="post" v-for="post in posts" v-bind:key="post._id">
@@ -20,11 +20,11 @@
 
 <script>
 import PostService from "../PostService";
-import Header from "@/components/Header";
+import PostHeader from "@/components/PostHeader";
 export default {
   name: "Posts",
   components: {
-    Header,
+    PostHeader
   },
   data() {
     return {
@@ -42,8 +42,8 @@ export default {
         "September",
         "October",
         "November",
-        "December",
-      ],
+        "December"
+      ]
     };
   },
   async created() {
@@ -68,8 +68,8 @@ export default {
     },
     async updatePosts() {
       this.posts = await PostService.getPosts();
-    },
-  },
+    }
+  }
 };
 </script>
 
