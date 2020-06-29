@@ -1,7 +1,10 @@
 <template>
   <div class="header">
     <!-- Trigger/Open The Modal -->
-    <button @click="openModal()" id="myBtn">Open Modal</button>
+
+    <button @click="openModal()" id="myBtn">
+      <img src="../assets/logo.png" alt="Avatar" class="avatar" /> @User1
+    </button>
     <router-link to="/">Home</router-link>|
     <router-link to="/about">About</router-link>
     <h2>MicroPosts</h2>
@@ -84,7 +87,7 @@ export default {
 
 .modal-header {
   padding: 2px 16px;
-  background-color: #5cb85c;
+  background-color: #72dded;
   color: white;
 }
 
@@ -94,7 +97,13 @@ export default {
 
 .modal-footer {
   padding: 2px 16px;
-  background-color: #5cb85c;
+  background-color: #72dded;
   color: white;
+}
+.avatar {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
 }
 </style>
