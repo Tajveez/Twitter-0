@@ -5,8 +5,6 @@
     <button @click="openModal()" id="myBtn">
       <img src="../assets/logo.png" alt="Avatar" class="avatar" /> @User1
     </button>
-    <router-link to="/">Home</router-link>|
-    <router-link to="/about">About</router-link>
     <h2>MicroPosts</h2>
     <!-- The Modal -->
     <div id="myModal" class="modal">
@@ -17,6 +15,8 @@
           <h2>Modal Header</h2>
         </div>
         <div class="modal-body">
+          <router-link to="/">Home</router-link>|
+          <router-link to="/about">About</router-link>
           <p>Some text in the Modal Body</p>
           <p>Some other text...</p>
         </div>
@@ -38,8 +38,8 @@ export default {
     closeModal() {
       var modal = document.getElementById("myModal");
       modal.classList.remove("show");
-    },
-  },
+    }
+  }
 };
 </script>
 
