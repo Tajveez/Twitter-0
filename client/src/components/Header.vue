@@ -3,22 +3,36 @@
     <!-- Trigger/Open The Modal -->
 
     <button @click="openModal()" id="myBtn">
-      <img src="../assets/logo.png" alt="Avatar" class="avatar" /> @User1
+      <img
+        src="https://www.pngitem.com/pimgs/m/506-5067022_sweet-shap-profile-placeholder-hd-png-download.png"
+        alt="Avatar"
+        class="avatar"
+      /> @User1
     </button>
-    <h2>MicroPosts</h2>
+    <!-- <h2>MicroPosts</h2> -->
     <!-- The Modal -->
     <div id="myModal" class="modal">
       <!-- Modal content -->
       <div class="modal-content">
         <div class="modal-header">
           <span @click="closeModal()" class="close">&times;</span>
-          <h2>Modal Header</h2>
+          <h2>Welcome, User</h2>
         </div>
         <div class="modal-body">
-          <router-link to="/">Home</router-link>|
-          <router-link to="/about">About</router-link>
-          <p>Some text in the Modal Body</p>
-          <p>Some other text...</p>
+          <ul>
+            <li>
+              <h1>
+                <router-link to="/">Home</router-link>
+              </h1>
+            </li>
+            <li>
+              <h1>
+                <router-link to="/about">About</router-link>
+              </h1>
+            </li>
+          </ul>
+          <!-- <p>Some text in the Modal Body</p>
+          <p>Some other text...</p>-->
         </div>
         <div class="modal-footer">
           <h3>Modal Footer</h3>
@@ -45,9 +59,15 @@ export default {
 
 <style scoped>
 /* The Modal (background) */
+.header {
+  background: antiquewhite;
+  display: flex;
+  padding: 15px;
+}
 .modal {
+  top: 0;
+  /* display: none; */
   position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
@@ -55,9 +75,12 @@ export default {
   background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
   left: -300px;
   opacity: 0;
-  transition: left 0.4s, opacity 0.4s;
+  transition: left 0.5s, opacity 0.3s;
+  z-index: -1;
 }
 .modal.show {
+  /* display: block; */
+  z-index: 1;
   left: 0;
   opacity: 1;
 }
@@ -66,10 +89,14 @@ export default {
   position: fixed;
   top: 0;
   background-color: #fefefe;
-  width: 50%;
+  width: 35%;
   height: 100%;
 }
 
+#myBtn {
+  background: #72dded;
+  border-radius: 50px;
+}
 /* The Close Button */
 .close {
   color: white;
