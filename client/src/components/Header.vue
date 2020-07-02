@@ -73,14 +73,12 @@ export default {
   overflow: auto; /* Enable scroll if needed */
   background-color: rgb(0, 0, 0); /* Fallback color */
   background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
-  left: -300px;
+  left: -1400px;
   opacity: 0;
-  transition: left 0.5s, opacity 0.3s;
-  z-index: -1;
+  transition: left 0.5s, opacity 0.2s;
+  z-index: 1;
 }
 .modal.show {
-  /* display: block; */
-  z-index: 1;
   left: 0;
   opacity: 1;
 }
