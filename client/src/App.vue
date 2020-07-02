@@ -1,6 +1,10 @@
 <template>
   <div id="app">
     <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
+    <!-- tutorials -->
+    <!-- https://www.youtube.com/watch?v=bQU-jPyQJ4A -->
+    <!-- https://www.youtube.com/watch?v=JnEH9tYLxLk -->
+
     <Header />
     <div class="ui equal width three column grid">
       <router-view class="column" />
