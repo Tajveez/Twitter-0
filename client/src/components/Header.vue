@@ -30,6 +30,16 @@
                 <router-link to="/about">About</router-link>
               </h1>
             </li>
+            <li>
+              <h1>
+                <router-link to="/login">Login</router-link>
+              </h1>
+            </li>
+            <li>
+              <h1>
+                <router-link to="/register">Register</router-link>
+              </h1>
+            </li>
           </ul>
           <!-- <p>Some text in the Modal Body</p>
           <p>Some other text...</p>-->

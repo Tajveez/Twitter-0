@@ -41,7 +41,7 @@
 export default {};
 </script>
 
-<style>
+<style scoped>
 /* Bordered form */
 form {
   border: 3px solid #f1f1f1;
