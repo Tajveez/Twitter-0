@@ -15,8 +15,12 @@ export default new Router({
     {
       path: "/about",
       name: "about",
-      component: () =>
-        import(/* webpackChunkName: "about_page" */ "./views/About"),
+      component: () => import(/* webpackChunkName: "about" */ "./views/About"),
+    },
+    {
+      path: "/login",
+      name: "login",
+      component: () => import(/* webpackChunkName: "login" */ "./views/Login"),
     },
   ],
 });

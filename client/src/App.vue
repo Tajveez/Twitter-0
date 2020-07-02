@@ -3,7 +3,7 @@
     <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
     <!-- tutorials -->
     <!-- https://www.youtube.com/watch?v=bQU-jPyQJ4A -->
-    <!-- https://www.youtube.com/watch?v=JnEH9tYLxLk -->
+    <!-- https://www.youtube.com/watch?v=JnEH9tYLxLkgi -->
 
     <Header />
     <div class="ui equal width three column grid">
