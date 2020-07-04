@@ -2,7 +2,10 @@
   <div class="header">
     <!-- Trigger/Open The Modal -->
 
-    <button @click="openModal()" id="myBtn">
+    <button
+      @click="openModal()"
+      class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
+    >
       <img
         src="https://www.pngitem.com/pimgs/m/506-5067022_sweet-shap-profile-placeholder-hd-png-download.png"
         alt="Avatar"

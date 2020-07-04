@@ -16,13 +16,14 @@
 <script>
 import Header from "@/components/Header";
 import RightSidebar from "@/components/RightSidebar";
+// import "@/assets/styles/output.css";
 
 export default {
   name: "App",
   components: {
     Header,
-    RightSidebar
-  }
+    RightSidebar,
+  },
 };
 </script>
 
