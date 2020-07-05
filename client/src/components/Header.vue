@@ -20,7 +20,7 @@
         class="avatar"
         /> @User1-->
       </a>
-      <h1 class="font-mono text-white text-3xl font-bold">Social App</h1>
+      <h1 class="text-white text-3xl font-bold">The Social App</h1>
       <div class="flex">
         <div class="flex" v-if="1 == 2">
           <a
