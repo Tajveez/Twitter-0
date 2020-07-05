@@ -6,7 +6,7 @@
     <!-- https://www.youtube.com/watch?v=JnEH9tYLxLkgi -->
 
     <Header />
-    <div class="ui equal width three column grid">
+    <div class="ui equal width three column grid bg-gray-300">
       <router-view class="column" />
       <RightSidebar class="three wide column" />
     </div>
@@ -22,8 +22,8 @@ export default {
   name: "App",
   components: {
     Header,
-    RightSidebar,
-  },
+    RightSidebar
+  }
 };
 </script>
 
@@ -36,7 +36,7 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 10px;
+  margin-top: 0;
 }
 /* .content-area {
   display: flex;

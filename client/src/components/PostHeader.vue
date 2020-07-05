@@ -1,8 +1,8 @@
 <template>
-  <div class="container">
+  <div>
     <!-- Create New Post -->
     <div class="create-post">
-      <label for="create-post"></label>
+      <!-- <label for="create-post"></label>
       <input
         type="text"
         id="create-post"
@@ -10,8 +10,14 @@
         maxlength="200"
         @keydown.enter.prevent="newPost()"
         placeholder="Add new post"
-      />
-      <button @click.prevent="newPost()" class="submit">Create</button>
+      />-->
+      <button
+        @click.prevent="newPost()"
+        class="flex rounded-full items-center text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0 text-2xl"
+      >
+        Create New
+        <i class="fa fa-pencil" aria-hidden="true"></i>
+      </button>
     </div>
   </div>
 </template>
@@ -45,7 +51,7 @@ export default {
 </script>
 
 <style scoped>
-form {
+/* form {
   display: flex;
 }
 
@@ -63,5 +69,5 @@ button[class="submit"] {
   border: 1px #72dded solid;
   cursor: pointer;
   height: 35px;
-}
+} */
 </style>

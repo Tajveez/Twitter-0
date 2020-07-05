@@ -1,10 +1,13 @@
 <template>
-  <div class="container">
-    <hr />
-    <PostHeader @update:post="updatePosts" />
+  <div>
+    <!-- <hr /> -->
     <p class="error" v-if="error">{{ error }}</p>
     <div class="post-container" v-if="posts.length > 0">
-      <div class="post" v-for="post in posts" v-bind:key="post._id">
+      <div
+        class="post shadow-xl mb-5 px-5 bg-white-500"
+        v-for="post in posts"
+        v-bind:key="post._id"
+      >
         <p class="text">{{ post.text }}</p>
         <div class="actions">
           <div class="date">
@@ -20,12 +23,10 @@
 
 <script>
 import PostService from "../PostService";
-import PostHeader from "@/components/PostHeader";
+
 export default {
   name: "Posts",
-  components: {
-    PostHeader
-  },
+
   data() {
     return {
       posts: [],
@@ -91,7 +92,7 @@ i {
   padding: 10px;
 }
 .post {
-  background: #72dded;
+  background: white;
   display: block;
   width: auto;
   padding: 10px;

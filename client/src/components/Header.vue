@@ -1,18 +1,30 @@
 <template>
-  <div class="header">
-    <!-- Trigger/Open The Modal -->
+  <div>
+    <nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6">
+      <!-- Trigger/Open The Modal -->
 
-    <button
-      @click="openModal()"
-      class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded"
-    >
-      <img
+      <a
+        @click="openModal()"
+        href="#"
+        class="flex rounded-full items-center text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0"
+      >
+        <img
+          src="https://www.pngitem.com/pimgs/m/506-5067022_sweet-shap-profile-placeholder-hd-png-download.png"
+          alt="Avatar"
+          class="w-10 h-10 rounded-full mr-4"
+        />
+        <div class="text-2xl">John doe</div>
+        <!-- <img
         src="https://www.pngitem.com/pimgs/m/506-5067022_sweet-shap-profile-placeholder-hd-png-download.png"
         alt="Avatar"
         class="avatar"
-      /> @User1
-    </button>
-    <!-- <h2>MicroPosts</h2> -->
+        /> @User1-->
+      </a>
+
+      <PostHeader @update:post="updatePosts" />
+
+      <!-- <h2>MicroPosts</h2> -->
+    </nav>
     <!-- The Modal -->
     <div id="myModal" class="modal">
       <!-- Modal content -->
@@ -56,7 +68,12 @@
 </template>
 
 <script>
+import PostHeader from "@/components/PostHeader";
+
 export default {
+  components: {
+    PostHeader
+  },
   methods: {
     openModal() {
       var modal = document.getElementById("myModal");
@@ -72,11 +89,11 @@ export default {
 
 <style scoped>
 /* The Modal (background) */
-.header {
+/* .header {
   background: antiquewhite;
   display: flex;
   padding: 15px;
-}
+} */
 .modal {
   top: 0;
   /* display: none; */
