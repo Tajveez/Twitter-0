@@ -11,13 +11,13 @@
         @keydown.enter.prevent="newPost()"
         placeholder="Add new post"
       />-->
-      <button
+      <a
         @click.prevent="newPost()"
-        class="flex rounded-full items-center text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0 text-2xl"
+        class="flex rounded-full items-center text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0 text-xl"
       >
+        <i class="fa fa-pencil mr-2" aria-hidden="true"></i>
         Create New
-        <i class="fa fa-pencil" aria-hidden="true"></i>
-      </button>
+      </a>
     </div>
   </div>
 </template>

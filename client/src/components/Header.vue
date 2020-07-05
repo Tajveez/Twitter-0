@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav class="flex items-center justify-between flex-wrap bg-teal-500 p-6">
+    <nav class="flex shadow-md items-center justify-between flex-wrap bg-teal-500 p-6">
       <!-- Trigger/Open The Modal -->
 
       <a
@@ -13,16 +13,39 @@
           alt="Avatar"
           class="w-10 h-10 rounded-full mr-4"
         />
-        <div class="text-2xl">John doe</div>
+        <div class="text-xl">John doe</div>
         <!-- <img
         src="https://www.pngitem.com/pimgs/m/506-5067022_sweet-shap-profile-placeholder-hd-png-download.png"
         alt="Avatar"
         class="avatar"
         /> @User1-->
       </a>
-
-      <PostHeader @update:post="updatePosts" />
-
+      <h1 class="font-mono text-white text-3xl font-bold">Social App</h1>
+      <div class="flex">
+        <div class="flex" v-if="1 == 2">
+          <a
+            class="flex rounded-full items-center text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0 text-xl mr-2"
+          >
+            <i class="fa fa-sign-in mr-2" aria-hidden="true"></i>
+            Login
+          </a>
+          <a
+            class="flex rounded-full items-center text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0 text-xl mr-2"
+          >
+            <i class="fa fa-user-plus mr-2" aria-hidden="true"></i>
+            Register
+          </a>
+        </div>
+        <div class="flex" v-else>
+          <a
+            class="flex rounded-full items-center text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0 text-xl mr-2"
+          >
+            <i class="fa fa-comment-dots mr-2" aria-hidden="true"></i>
+            Chat
+          </a>
+          <PostHeader @update:post="updatePosts" />
+        </div>
+      </div>
       <!-- <h2>MicroPosts</h2> -->
     </nav>
     <!-- The Modal -->
