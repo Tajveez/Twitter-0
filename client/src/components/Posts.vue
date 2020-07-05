@@ -8,10 +8,20 @@
         v-for="post in posts"
         v-bind:key="post._id"
       >
+        <div class="flex py-2 ml-2 border-gray rounded">
+          <img
+            src="https://www.pngitem.com/pimgs/m/506-5067022_sweet-shap-profile-placeholder-hd-png-download.png"
+            alt="Avatar"
+            class="w-10 h-10 rounded-full mr-4"
+          />
+          <div>
+            <div class="text-xl">John doe</div>
+            <p class="text-xs">{{ getDate(post.createdAt) }}</p>
+          </div>
+        </div>
         <p class="text">{{ post.text }}</p>
         <div class="actions">
           <div class="date">
-            {{ getDate(post.createdAt) }}
             <i @click="deletePost(post._id)" class="fas fa-trash-alt"></i>
           </div>
         </div>
