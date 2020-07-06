@@ -12,19 +12,26 @@
           <img
             src="https://www.pngitem.com/pimgs/m/506-5067022_sweet-shap-profile-placeholder-hd-png-download.png"
             alt="Avatar"
-            class="w-10 h-10 rounded-full mr-4"
+            class="w-12 h-12 rounded-full mr-4"
           />
-          <div>
-            <div class="text-xl">John doe</div>
-            <p class="text-xs">{{ getDate(post.createdAt) }}</p>
+          <div class="text-left">
+            <div class="inline text-xl font-extrabold pr-2">John doe</div>
+            <p class="inline text-gray-600 text-lg pr-1">@johndoe</p>
+            <p class="inline text-gray-600 text-xs">{{ getDate(post.createdAt) }}</p>
+            <p class="text-xl">{{ post.text }}</p>
           </div>
         </div>
-        <p class="text">{{ post.text }}</p>
-        <div class="actions">
+        <div class="text-xl">
+          <i class="ml-10 fas fa-share-alt"></i>
+          <i class="ml-10 fas fa-retweet"></i>
+          <i class="ml-10 fas fa-heart"></i>
+          <i class="ml-10 fas fa-comment"></i>
+          <i @click="deletePost(post._id)" class="ml-10 fas fa-trash-alt"></i>
+        </div>
+        <!-- <div class="actions">
           <div class="date">
-            <i @click="deletePost(post._id)" class="fas fa-trash-alt"></i>
           </div>
-        </div>
+        </div>-->
       </div>
     </div>
     <div v-else>No Posts Available</div>
@@ -104,7 +111,7 @@ i {
 .post {
   background: white;
   display: block;
-  width: auto;
+  width: 60%;
   padding: 10px;
   margin: 10px;
   border-radius: 10px;
