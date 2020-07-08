@@ -1,37 +1,32 @@
 <template>
-  <div class="w-1/2 p-5">
+  <div class="w-1/2 p-5 m-auto">
     <form method="post" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
       <h1 class="mb-4 text-4xl">Login</h1>
-      <!-- <div class="imgcontainer">
-        <img
-          src="https://www.pngitem.com/pimgs/m/506-5067022_sweet-shap-profile-placeholder-hd-png-download.png"
-          alt="Avatar"
-          class="avatar"
-        />
-      </div>-->
-
-      <div class="mb-4">
-        <label class="block text-gray-700 text-sm font-bold mb-2" for="uname">
-          <b>Username</b>
-        </label>
-        <input
-          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          type="text"
-          placeholder="Enter Username"
-          name="uname"
-          required
-        />
-
-        <label class="block text-gray-700 text-sm font-bold mb-2" for="psw">
-          <b>Password</b>
-        </label>
-        <input
-          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
-          type="password"
-          placeholder="Enter Password"
-          name="psw"
-          required
-        />
+      <div>
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="uname">
+            <b>Username</b>
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            type="text"
+            placeholder="Enter Username"
+            name="uname"
+            required
+          />
+        </div>
+        <div class="mb-4">
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="psw">
+            <b>Password</b>
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            type="password"
+            placeholder="Enter Password"
+            name="psw"
+            required
+          />
+        </div>
         <div class="text-right mt-2">
           <label>
             <input type="checkbox" checked="checked" name="remember" /> Remember me

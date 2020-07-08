@@ -20,21 +20,25 @@
         class="avatar"
         /> @User1-->
       </a>
-      <h1 class="text-white text-3xl font-bold">The Social App</h1>
+      <router-link to="/">
+        <h1 class="text-white text-3xl font-bold">The Social App</h1>
+      </router-link>
       <div class="flex">
-        <div class="flex" v-if="1 == 2">
-          <a
+        <div class="flex" v-if="1 == 1">
+          <router-link
+            to="login"
             class="flex rounded-full items-center text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0 text-xl mr-2"
           >
             <i class="fa fa-sign-in mr-2" aria-hidden="true"></i>
             Login
-          </a>
-          <a
+          </router-link>
+          <router-link
+            to="register"
             class="flex rounded-full items-center text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0 text-xl mr-2"
           >
             <i class="fa fa-user-plus mr-2" aria-hidden="true"></i>
             Register
-          </a>
+          </router-link>
         </div>
         <div class="flex" v-else>
           <a
