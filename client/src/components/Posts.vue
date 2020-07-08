@@ -21,12 +21,22 @@
             <p class="text-xl">{{ post.text }}</p>
           </div>
         </div>
-        <div class="text-xl">
-          <i class="ml-10 fas fa-share-alt"></i>
-          <i class="ml-10 fas fa-retweet"></i>
-          <i class="ml-10 fas fa-heart"></i>
-          <i class="ml-10 fas fa-comment"></i>
-          <i @click="deletePost(post._id)" class="ml-10 fas fa-trash-alt"></i>
+        <div class="text-xl w-full">
+          <div class="text-gray-500 w-1/5 mr-5 inline">
+            <i style="color: gray" class="ml-10 fas fa-share-alt"></i> 12
+          </div>
+          <div class="text-gray-500 mr-5 inline">
+            <i style="color: gray" class="ml-10 fas fa-retweet"></i> 15
+          </div>
+          <div class="text-gray-500 mr-5 inline">
+            <i style="color: gray" class="ml-10 fas fa-heart"></i> 18
+          </div>
+          <div class="text-gray-500 mr-5 inline">
+            <i style="color: gray" class="ml-10 fas fa-comment"></i> 20
+          </div>
+          <div class="inline">
+            <i @click="deletePost(post._id)" style="color: gray" class="ml-10 fas fa-trash-alt"></i>
+          </div>
         </div>
         <!-- <div class="actions">
           <div class="date">

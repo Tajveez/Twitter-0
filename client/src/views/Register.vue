@@ -1,41 +1,86 @@
 <template>
-  <div>
-    <form action="action_page.php" style="border:1px solid #ccc">
-      <div class="container">
-        <h1>Sign Up</h1>
-        <p>Please fill in this form to create an account.</p>
-        <hr />
+  <div class="w-1/2 p-5">
+    <form method="post" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+      <h1 class="mb-4 text-4xl">Register</h1>
+      <!-- <div class="imgcontainer">
+        <img
+          src="https://www.pngitem.com/pimgs/m/506-5067022_sweet-shap-profile-placeholder-hd-png-download.png"
+          alt="Avatar"
+          class="avatar"
+        />
+      </div>-->
 
-        <label for="email">
-          <b>Email</b>
-        </label>
-        <input type="text" placeholder="Enter Email" name="email" required />
-
-        <label for="psw">
-          <b>Password</b>
-        </label>
-        <input type="password" placeholder="Enter Password" name="psw" required />
-
-        <label for="psw-repeat">
-          <b>Repeat Password</b>
-        </label>
-        <input type="password" placeholder="Repeat Password" name="psw-repeat" required />
-
-        <label>
-          <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px" /> Remember me
-        </label>
-
-        <p>
-          By creating an account you agree to our
+      <div class="mb-4">
+        <div>
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="uname">
+            <b>Username</b>
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            type="text"
+            placeholder="Enter Username"
+            name="uname"
+            required
+          />
+        </div>
+        <div>
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="uname">
+            <b>Email</b>
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            type="text"
+            placeholder="Enter Email"
+            name="uname"
+            required
+          />
+        </div>
+        <div>
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="psw">
+            <b>Password</b>
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            type="password"
+            placeholder="Enter Password"
+            name="psw"
+            required
+          />
+        </div>
+        <div>
+          <label class="block text-gray-700 text-sm font-bold mb-2" for="psw">
+            <b>Confirm Password</b>
+          </label>
+          <input
+            class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+            type="password"
+            placeholder="Enter Password Again"
+            name="psw"
+            required
+          />
+        </div>
+        <!-- <div class="text-right mt-2">
+          <label>
+            <input type="checkbox" checked="checked" name="remember" /> Remember me
+          </label>
+        </div>-->
+      </div>
+      <div class="flex items-center justify-center">
+        <!-- <span class="psw">
           <a
+            class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800"
             href="#"
-            style="color:dodgerblue"
-          >Terms & Privacy</a>.
-        </p>
-
-        <div class="clearfix">
-          <button type="button" class="cancelbtn">Cancel</button>
-          <button type="submit" class="signupbtn">Sign Up</button>
+          >Forgot password?</a>
+        </span>-->
+        <div>
+          <button
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold mr-2 py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            type="submit"
+          >Login</button>
+          <button
+            class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            type="submit"
+          >Sign up</button>
         </div>
       </div>
     </form>
@@ -47,78 +92,4 @@ export default {};
 </script>
 
 <style scoped>
-* {
-  box-sizing: border-box;
-}
-
-/* Full-width input fields */
-input[type="text"],
-input[type="password"] {
-  width: 100%;
-  padding: 15px;
-  margin: 5px 0 22px 0;
-  display: inline-block;
-  border: none;
-  background: #f1f1f1;
-}
-
-input[type="text"]:focus,
-input[type="password"]:focus {
-  background-color: #ddd;
-  outline: none;
-}
-
-hr {
-  border: 1px solid #f1f1f1;
-  margin-bottom: 25px;
-}
-
-/* Set a style for all buttons */
-button {
-  background-color: #4caf50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  opacity: 0.9;
-}
-
-button:hover {
-  opacity: 1;
-}
-
-/* Extra styles for the cancel button */
-.cancelbtn {
-  padding: 14px 20px;
-  background-color: #f44336;
-}
-
-/* Float cancel and signup buttons and add an equal width */
-.cancelbtn,
-.signupbtn {
-  float: left;
-  width: 50%;
-}
-
-/* Add padding to container elements */
-.container {
-  padding: 16px;
-}
-
-/* Clear floats */
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-/* Change styles for cancel button and signup button on extra small screens */
-@media screen and (max-width: 300px) {
-  .cancelbtn,
-  .signupbtn {
-    width: 100%;
-  }
-}
 </style>

@@ -6,10 +6,11 @@
     <!-- https://www.youtube.com/watch?v=JnEH9tYLxLkgi -->
 
     <Header />
-    <div class="ui equal width three column grid bg-gray-300">
+    <!-- <div class="bg-gray-300 flex justify-center"> -->
+    <div class="bg-gray-300">
       <router-view class="column" />
-      <RightSidebar class="three wide column" />
     </div>
+    <RightSidebar class="three wide column" />
   </div>
 </template>
 

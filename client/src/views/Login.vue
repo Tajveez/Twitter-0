@@ -1,37 +1,60 @@
 <template>
-  <div>
-    <form method="post">
-      <div class="imgcontainer">
+  <div class="w-1/2 p-5">
+    <form method="post" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+      <h1 class="mb-4 text-4xl">Login</h1>
+      <!-- <div class="imgcontainer">
         <img
           src="https://www.pngitem.com/pimgs/m/506-5067022_sweet-shap-profile-placeholder-hd-png-download.png"
           alt="Avatar"
           class="avatar"
         />
-      </div>
+      </div>-->
 
-      <div class="container">
-        <label for="uname">
+      <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="uname">
           <b>Username</b>
         </label>
-        <input type="text" placeholder="Enter Username" name="uname" required />
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          type="text"
+          placeholder="Enter Username"
+          name="uname"
+          required
+        />
 
-        <label for="psw">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="psw">
           <b>Password</b>
         </label>
-        <input type="password" placeholder="Enter Password" name="psw" required />
-
-        <button type="submit">Login</button>
-        <label>
-          <input type="checkbox" checked="checked" name="remember" /> Remember me
-        </label>
+        <input
+          class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+          type="password"
+          placeholder="Enter Password"
+          name="psw"
+          required
+        />
+        <div class="text-right mt-2">
+          <label>
+            <input type="checkbox" checked="checked" name="remember" /> Remember me
+          </label>
+        </div>
       </div>
-
-      <div class="container" style="background-color:#f1f1f1">
-        <button type="button" class="cancelbtn">Cancel</button>
+      <div class="flex items-center justify-between">
         <span class="psw">
-          Forgot
-          <a href="#">password?</a>
+          <a
+            class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800"
+            href="#"
+          >Forgot password?</a>
         </span>
+        <div>
+          <button
+            class="bg-blue-500 hover:bg-blue-700 text-white font-bold mr-2 py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            type="submit"
+          >Login</button>
+          <button
+            class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            type="submit"
+          >Sign up</button>
+        </div>
       </div>
     </form>
   </div>
@@ -42,76 +65,4 @@ export default {};
 </script>
 
 <style scoped>
-/* Bordered form */
-form {
-  border: 3px solid #f1f1f1;
-}
-
-/* Full-width inputs */
-input[type="text"],
-input[type="password"] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
-}
-
-/* Set a style for all buttons */
-button {
-  background-color: #4caf50;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-}
-
-/* Add a hover effect for buttons */
-button:hover {
-  opacity: 0.8;
-}
-
-/* Extra style for the cancel button (red) */
-.cancelbtn {
-  width: auto;
-  padding: 10px 18px;
-  background-color: #f44336;
-}
-
-/* Center the avatar image inside this container */
-.imgcontainer {
-  text-align: center;
-  margin: 24px 0 12px 0;
-}
-
-/* Avatar image */
-img.avatar {
-  width: 40%;
-  border-radius: 50%;
-}
-
-/* Add padding to containers */
-.container {
-  padding: 16px;
-}
-
-/* The "Forgot password" text */
-span.psw {
-  float: right;
-  padding-top: 16px;
-}
-
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-  span.psw {
-    display: block;
-    float: none;
-  }
-  .cancelbtn {
-    width: 100%;
-  }
-}
 </style>
