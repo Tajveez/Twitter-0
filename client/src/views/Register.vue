@@ -99,7 +99,7 @@
             href="#"
           >Forgot password?</a>
         </span>-->
-        <div class="mb-4">
+        <div class="mb-4 ml-auto">
           <button
             class="bg-blue-500 hover:bg-blue-700 text-white font-bold mr-2 py-2 px-4 rounded focus:outline-none focus:shadow-outline"
             type="submit"
