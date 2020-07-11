@@ -30,9 +30,11 @@ export default {
 
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Source+Sans+Pro&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500&display=swap");
 #app {
+  font-family: "Maven Pro", sans-serif;
   /* font-family: Avenir, Helvetica, Arial, sans-serif; */
-  font-family: "Dancing Script", cursive;
+  /* font-family: "Dancing Script", cursive; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
