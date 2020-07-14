@@ -15,12 +15,17 @@
             class="w-12 h-12 rounded-full mr-4"
           />
           <div class="text-left">
-            <div class="inline text-xl font-extrabold pr-2">John doe</div>
-            <p class="inline text-gray-600 text-lg pr-1">@johndoe</p>
-            <p class="inline text-gray-600 text-xs">{{ getDate(post.createdAt) }}</p>
+            <router-link to="profile">
+              <div class="inline text-xl font-extrabold pr-2">John doe</div>
+              <p class="inline text-gray-600 text-lg pr-2">@johndoe</p>
+            </router-link>
+            <router-link to="post">
+              <p class="inline text-gray-600 text-lg">{{ getDate(post.createdAt) }}</p>
+            </router-link>
             <p class="text-xl">{{ post.text }}</p>
           </div>
         </div>
+        <hr />
         <div class="text-xl w-full">
           <div class="text-gray-500 w-1/5 mr-5 inline">
             <i style="color: gray" class="ml-10 fas fa-share-alt"></i> 12

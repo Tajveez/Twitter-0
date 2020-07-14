@@ -24,7 +24,7 @@
         <h1 class="text-white text-3xl font-bold">The Social App</h1>
       </router-link>
       <div class="flex">
-        <div class="flex" v-if="1 == 1">
+        <div class="flex" v-if="1 == 2">
           <router-link
             to="login"
             class="flex rounded-full items-center text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0 text-xl mr-2"
@@ -41,6 +41,11 @@
           </router-link>
         </div>
         <div class="flex" v-else>
+          <a
+            class="flex rounded-full items-center text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0 text-xl mr-2"
+          >
+            <i class="fa fa-bell" aria-hidden="true"></i>
+          </a>
           <a
             class="flex rounded-full items-center text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0 text-xl mr-2"
           >

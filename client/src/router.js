@@ -28,5 +28,16 @@ export default new Router({
       component: () =>
         import(/* webpackChunkName: "register" */ "./views/Register"),
     },
+    {
+      path: "/post",
+      name: "post",
+      component: () => import(/* webpackChunkName: "Post" */ "./views/Post"),
+    },
+    {
+      path: "/profile",
+      name: "profile",
+      component: () =>
+        import(/* webpackChunkName: "Profile" */ "./views/Profile"),
+    },
   ],
 });
