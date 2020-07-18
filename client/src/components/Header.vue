@@ -1,17 +1,27 @@
 <template>
   <div>
-    <nav class="flex shadow-md items-center justify-between flex-wrap bg-teal-500 p-6">
+    <nav
+      class="flex shadow-md items-center justify-between flex-wrap bg-teal-500 pr-5 pl-5 pt-2 pb-2"
+    >
       <!-- Trigger/Open The Modal -->
-
       <a
+        @click="closeModal()"
+        href="#"
+        class="flex rounded-full items-center text-sm px-2 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0"
+        v-if="is_modal_open"
+      >
+        <div class="text-xl">Close X</div>
+      </a>
+      <a
+        v-else
         @click="openModal()"
         href="#"
-        class="flex rounded-full items-center text-sm px-4 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0"
+        class="flex rounded-full items-center text-sm px-2 py-2 leading-none border rounded text-white border-white hover:border-transparent hover:text-teal-500 hover:bg-white mt-4 lg:mt-0"
       >
         <img
           src="https://www.pngitem.com/pimgs/m/506-5067022_sweet-shap-profile-placeholder-hd-png-download.png"
           alt="Avatar"
-          class="w-10 h-10 rounded-full mr-4"
+          class="w-10 h-10 rounded-full mr-2"
         />
         <div class="text-xl">John doe</div>
         <!-- <img
@@ -60,11 +70,9 @@
     <!-- The Modal -->
     <div id="myModal" class="modal">
       <!-- Modal content -->
-      <div class="modal-content">
-        <div class="modal-header">
-          <span @click="closeModal()" class="close">&times;</span>
-          <h2>Welcome, User</h2>
-        </div>
+      <div class="modal-content shadow bg-gray-300">
+        <!-- <span @click="closeModal()" class="close">&times;</span> -->
+
         <div class="modal-body">
           <ul>
             <li>
@@ -91,9 +99,6 @@
           <!-- <p>Some text in the Modal Body</p>
           <p>Some other text...</p>-->
         </div>
-        <div class="modal-footer">
-          <h3>Modal Footer</h3>
-        </div>
       </div>
     </div>
   </div>
@@ -103,6 +108,11 @@
 import PostHeader from "@/components/PostHeader";
 
 export default {
+  data() {
+    return {
+      is_modal_open: false
+    };
+  },
   components: {
     PostHeader
   },
@@ -110,10 +120,12 @@ export default {
     openModal() {
       var modal = document.getElementById("myModal");
       modal.classList.add("show");
+      this.is_modal_open = true;
     },
     closeModal() {
       var modal = document.getElementById("myModal");
       modal.classList.remove("show");
+      this.is_modal_open = false;
     }
   }
 };
@@ -127,14 +139,12 @@ export default {
   padding: 15px;
 } */
 .modal {
-  top: 0;
+  /* top: 0; */
   /* display: none; */
   position: fixed; /* Stay in place */
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0, 0, 0); /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
   left: -1400px;
   opacity: 0;
   transition: left 0.5s, opacity 0.2s;
@@ -147,7 +157,7 @@ export default {
 /* Modal Content */
 .modal-content {
   position: fixed;
-  top: 0;
+  /* top: 0; */
   background-color: #fefefe;
   width: 35%;
   height: 100%;

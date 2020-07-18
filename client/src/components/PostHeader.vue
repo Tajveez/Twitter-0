@@ -16,14 +16,16 @@
         <div style="text-align:right" class="mt-2">
           <a
             @click.prevent="newPost()"
-            class="mr-2 cursor-pointer rounded-full text-sm leading-none px-4 py-2 border rounded text-teal-500 border-teal-500 hover:border-transparent hover:text-white hover:bg-teal-500 mt-4 lg:mt-0 text-xl"
-          >
-            <!-- <i class="fa fa-pencil mr-2" aria-hidden="true"></i> -->
-            Post
-          </a>
+            class="mr-2 cursor-pointer rounded-full leading-none px-2 py-2 border rounded text-teal-500 border-teal-500 hover:border-transparent hover:text-white hover:bg-teal-500 mt-2 lg:mt-0 text-xl"
+            v-if="text"
+          >Post</a>
+          <a
+            v-else
+            class="mr-2 cursor-not-allowed rounded-full leading-none px-2 py-2 border rounded text-gray-500 border-gray-500 mt-2 lg:mt-0 text-xl"
+          >Post</a>
           <a
             @click.prevent="closeModal()"
-            class="rounded-full cursor-pointer text-sm leading-none px-4 py-2 border rounded text-teal-500 border-teal-500 hover:border-transparent hover:text-white hover:bg-teal-500 mt-4 lg:mt-0 text-xl"
+            class="rounded-full cursor-pointer text-sm leading-none px-2 py-2 border rounded text-teal-500 border-teal-500 hover:border-transparent hover:text-white hover:bg-teal-500 mt-2 lg:mt-0 text-xl"
           >Close</a>
         </div>
       </div>

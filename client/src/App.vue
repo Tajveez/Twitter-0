@@ -1,5 +1,5 @@
 <template>
-  <div id="app">
+  <div id="app" class="bg-gray-300">
     <!-- <img alt="Vue logo" src="./assets/logo.png" /> -->
     <!-- tutorials -->
     <!-- https://www.youtube.com/watch?v=bQU-jPyQJ4A -->
@@ -7,7 +7,7 @@
 
     <Header />
     <!-- <div class="bg-gray-300 flex justify-center"> -->
-    <div class="bg-gray-300">
+    <div class>
       <router-view class="column" />
     </div>
     <RightSidebar class="three wide column" />
